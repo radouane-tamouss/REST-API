@@ -9,7 +9,13 @@ class API{
         $data = $db->prepare('SELECT * FROM users ORDER BY id');
         $data->execute();
         while($OutputData = $data->fetch(PDO::FETCH_ASSOC)){
-            
+            $users[$OutputData['id']] = array(
+                'id' => $OutputData['id'],
+                'name' => $OutputData['name'],
+                'age' =>$OutputData['age']
+            );
         }
+
+        
     }
 }
