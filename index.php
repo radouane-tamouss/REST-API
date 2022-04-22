@@ -15,7 +15,12 @@ class API{
                 'age' =>$OutputData['age']
             );
         }
+        return json_encode($users);
 
-        
     }
 }
+
+$API = new API;
+header('Content-Type: application/json');
+echo $API->Select();
+?>
