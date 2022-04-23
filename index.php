@@ -12,7 +12,7 @@ class API{
             $users[$OutputData['id']] = array(
                 'id' => $OutputData['id'],
                 'name' => $OutputData['name'],
-                'age' =>$OutputData['age']
+                'age' => $OutputData['age']
             );
         }
         return json_encode($users);
